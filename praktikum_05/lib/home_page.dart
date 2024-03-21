@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/second_page',
-                    arguments: 'Menggunakan route');
+                    arguments: 'Menggunakan Route');
               },
               child: const Text('Menuju halaman kedua dengan route'),
             ),
