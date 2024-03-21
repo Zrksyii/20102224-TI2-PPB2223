@@ -4,7 +4,7 @@ import 'package:praktikum_03/bloc/contact_cubit.dart';
 import 'package:praktikum_03/views/add_contact_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,10 +55,10 @@ class HomeScreen extends StatelessWidget {
           } else if (state is ContactLoading) {
             return const Center(child: CircularProgressIndicator());
           }
-          return Center(
+          return const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Icon(Icons.group_outlined),
                 Text('Your contact is empty'),
               ],
