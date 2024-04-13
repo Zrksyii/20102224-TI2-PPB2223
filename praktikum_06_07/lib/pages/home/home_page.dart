@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                               Radius.circular(10),
                             ),
                             image: DecorationImage(
-                              image: AssetImage('assets/images/img.png'),
+                              image: AssetImage('assets/images/img.jpg'),
                               fit: BoxFit.cover,
                             ),
                             boxShadow: [
@@ -132,9 +132,127 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 200),
+              child: DraggableScrollableSheet(
+                  builder: (context, scrollController) {
+                return Container(
+                  decoration: BoxDecoration(
+                    color: kWhite,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(40),
+                    ),
+                  ),
+                  padding: const EdgeInsets.only(left: 30, right: 30, top: 21),
+                  child: Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 14 + 4),
+                        child: SingleChildScrollView(
+                          controller: scrollController,
+                          child: Column(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Transactions History',
+                                  style: kHeading6.copyWith(
+                                      color: kLuckyBlue,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 31,
+                              ),
+                              _transactionList(
+                                kTreeGreen.withOpacity(0.2),
+                                'assets/icons/triangle_up.png',
+                                'Success!',
+                                'February 19, 03:25 PM',
+                                '+ 100.000',
+                              ),
+                              _transactionList(
+                                kTreeGreen.withOpacity(0.2),
+                                'assets/icons/triangle_up.png',
+                                'Success!',
+                                'February 16, 01:25 PM',
+                                '+ 150.000',
+                              ),
+                              _transactionList(
+                                kOrange.withOpacity(0.2),
+                                'assets/icons/triangle_down.png',
+                                'Starbucks Drinks',
+                                'February 10, 12:25 PM',
+                                '- 110.000',
+                              ),
+                              _transactionList(
+                                kOrange.withOpacity(0.2),
+                                'assets/icons/triangle_down.png',
+                                'Payment #Invest',
+                                'February 5, 11:05 PM',
+                                '- 130.000',
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          height: 4,
+                          width: 49,
+                          color: kEgyptianBlue.withOpacity(0.5),
+                        ),
+                      )
+                    ],
+                  ),
+                );
+              }),
             )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _transactionList(
+      Color bgColor, String icon, String title, String sub, String amount) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 30),
+      child: Row(
+        children: [
+          SizedBox(
+            height: 30,
+            width: 30,
+            child: CircleAvatar(
+              backgroundColor: bgColor,
+              child: Image(
+                image: AssetImage(icon),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: kBody1.copyWith(color: kLuckyBlue),
+              ),
+              Text(
+                sub,
+                style: kCaption.copyWith(color: kLightGray),
+              ),
+            ],
+          ),
+          Spacer(),
+          Text(
+            amount,
+            style: kBody1.copyWith(color: kLuckyBlue),
+          )
+        ],
       ),
     );
   }
