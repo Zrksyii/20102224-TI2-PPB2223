@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "486490902976",
+    "project_id": "prakflutterfirebase-89cee",
+    "storage_bucket": "prakflutterfirebase-89cee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486490902976:android:5e4d1ae1f62f4d1a637825",
+        "android_client_info": {
+          "package_name": "com.example.praktikum_08"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8Nmtd-GoYK9Ulnnuzw2hwEYVjh4J6K_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
