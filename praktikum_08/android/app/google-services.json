@@ -12,7 +12,12 @@
           "package_name": "com.example.praktikum_08"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "486490902976-1na6h5o0oa3d9srd4mqrj1lf64ja969n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA8Nmtd-GoYK9Ulnnuzw2hwEYVjh4J6K_Y"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486490902976-1na6h5o0oa3d9srd4mqrj1lf64ja969n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "486490902976-s81lufu0keqbi2dln0o6b3ioi7ke3spd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.praktikum08"
+              }
+            }
+          ]
         }
       }
     }
