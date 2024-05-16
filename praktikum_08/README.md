@@ -1,3 +1,1 @@
-# praktikum_08
-
-A new Flutter project.
+# praktikum_09 & praktikum_10 Firebase_Auth
