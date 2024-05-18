@@ -8,7 +8,6 @@ import 'package:praktikum_08/bloc/login/login_cubit.dart';
 import 'package:praktikum_08/bloc/register/register_cubit.dart';
 import 'package:praktikum_08/ui/home_screen.dart';
 import 'package:praktikum_08/ui/login.dart';
-import 'package:praktikum_08/ui/splash.dart';
 import 'package:praktikum_08/utils/routes.dart';
 import 'firebase_options.dart';
 
